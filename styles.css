@@ -1,4 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap");
+:root {
+  --bg-color-light: #ffffff;
+  --text-color-light: #333333;
+  --icon-color-light: #333333;
+  --bg-color-dark: #21253a;
+  --text-color-dark: #ffffff;
+  --icon-color-dark: #ffffff;
+}
 
 body {
   display: flex;
@@ -9,6 +17,14 @@ body {
   font-family: "Poppins", sans-serif;
   background-color: #21253a;
   color: #ffffff;
+  background-color: var(--bg-color-light);
+  color: var(--text-color-light);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+  background-color: var(--bg-color-dark);
+  color: var(--text-color-dark);
 }
 
 nav {
@@ -47,13 +63,42 @@ nav {
   text-decoration: underline 3px;
 }
 
+#themeToggle {
+  margin-right: 45px;
+  border: none; /* Remove the default button border */
+  border-radius: 50%; /* Make the border round */
+  background-color: transparent; /* Make the background transparent */
+  cursor: pointer;
+  padding: 10px;
+  transition: background-color 0.3s;
+}
+
+#themeToggle:hover {
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.3
+  ); /* Add a slight background color on hover */
+}
+
+.typewriter-container {
+  display: inline-block;
+}
+
 .typewriter {
-  display: flex;
+  display: inline-block;
   overflow: hidden;
   border-right: 0.2em solid #000;
   white-space: nowrap;
   letter-spacing: 0.15em;
   animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+.additional-text {
+  display: none; /* Hide the additional text initially */
+  vertical-align: top;
+  margin-left: 10px; /* Adjust the margin as needed */
 }
 
 footer {
@@ -69,6 +114,14 @@ footer {
   color: white;
   margin: 0 10px;
   font-size: 24px;
+}
+
+.icon-wrapper {
+  color: var(--icon-color-light); /* Set initial color for icons */
+}
+
+body.dark-mode .icon-wrapper {
+  color: var(--icon-color-dark); /* Set color for icons in dark mode */
 }
 
 .icon-wrapper {
