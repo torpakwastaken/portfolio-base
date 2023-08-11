@@ -82,12 +82,24 @@ nav {
   ); /* Add a slight background color on hover */
 }
 
+.page-container {
+  padding: 20px; /* Add padding to both left and right sides */
+}
+
+.typewriter-with-text {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Center content horizontally */
+  text-align: center; /* Center text within each container */
+  margin-top: 20px; /* Add margin to the top of the entire container */
+}
+
 .typewriter-container {
   display: inline-block;
+  margin-bottom: 200px; /* Add margin between typewriter and additional text */
 }
 
 .typewriter {
-  display: inline-block;
   overflow: hidden;
   border-right: 0.2em solid #000;
   white-space: nowrap;
@@ -97,8 +109,23 @@ nav {
 
 .additional-text {
   display: none; /* Hide the additional text initially */
-  vertical-align: top;
-  margin-left: 10px; /* Adjust the margin as needed */
+  margin-top: 10px;
+  text-align: center; /* Center text within container */
+}
+
+.image-container {
+  text-align: center; /* Center the image horizontally */
+  max-width: 30%; /* Set maximum width to 100% */
+  margin-top: 10px; /* Add margin to separate the image from the text */
+  margin-bottom: 180px;
+  margin-left: 888px;
+  overflow: hidden; /* Hide any overflowing content */
+}
+
+.image-container img {
+  max-width: 100%; /* Make the image fit the container width */
+  height: auto; /* Maintain aspect ratio */
+  display: none; /* Hide the image initially */
 }
 
 footer {

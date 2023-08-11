@@ -1,17 +1,19 @@
 const textElement = document.getElementById("text");
-const additionalText = document.querySelector(".additional-text"); // Select the additional text container
+const additionalText = document.querySelector(".additional-text");
+const image = document.getElementById("image"); // Select the image by its id
 const text =
-  "Hello, this is a basic < typewriter > animation created by Y.Emre KOYUNLU.";
+  "Hello, this is a basic typewriter animation created by < torpakwastaken >";
 let charIndex = 0;
 
 function type() {
   if (charIndex < text.length) {
     textElement.textContent += text.charAt(charIndex);
     charIndex++;
-    setTimeout(type, 50); // Adjust the timeout as needed
+    setTimeout(type, 50);
   } else {
-    // Animation is complete, reveal the additional text
+    // Animation is complete, reveal the additional text and image
     additionalText.style.display = "block";
+    image.style.display = "block";
   }
 }
 
