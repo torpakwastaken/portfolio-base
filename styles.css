@@ -96,7 +96,7 @@ nav {
 
 .typewriter-container {
   display: inline-block;
-  margin-bottom: 200px; /* Add margin between typewriter and additional text */
+  margin-bottom: 10px; /* Add margin between typewriter and additional text */
 }
 
 .typewriter {
@@ -115,17 +115,16 @@ nav {
 
 .image-container {
   text-align: center; /* Center the image horizontally */
-  max-width: 30%; /* Set maximum width to 100% */
+  max-width: 50%; /* Set maximum width to 100% */
   margin-top: 10px; /* Add margin to separate the image from the text */
-  margin-bottom: 180px;
-  margin-left: 888px;
   overflow: hidden; /* Hide any overflowing content */
 }
 
 .image-container img {
-  max-width: 100%; /* Make the image fit the container width */
+  max-width: 60%; /* Make the image fit the container width */
   height: auto; /* Maintain aspect ratio */
   display: none; /* Hide the image initially */
+  justify-content: flex-end;
 }
 
 footer {
