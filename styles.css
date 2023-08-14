@@ -95,8 +95,11 @@ nav {
 }
 
 .typewriter-container {
-  display: inline-block;
-  margin-bottom: 10px; /* Add margin between typewriter and additional text */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 20px;
 }
 
 .typewriter {
@@ -108,23 +111,35 @@ nav {
 }
 
 .additional-text {
-  display: none; /* Hide the additional text initially */
+  display: none;
   margin-top: 10px;
-  text-align: center; /* Center text within container */
+  text-align: center;
 }
 
-.image-container {
-  text-align: center; /* Center the image horizontally */
-  max-width: 50%; /* Set maximum width to 100% */
-  margin-top: 10px; /* Add margin to separate the image from the text */
-  overflow: hidden; /* Hide any overflowing content */
+.image-and-text {
+  display: none; /* Initially hide the image and text container */
+  flex-direction: row; /* Display the image and text side by side */
+  align-items: center; /* Align items vertically */
+  justify-content: center; /* Center items horizontally */
+  margin-top: 20px;
 }
 
-.image-container img {
-  max-width: 60%; /* Make the image fit the container width */
-  height: auto; /* Maintain aspect ratio */
-  display: none; /* Hide the image initially */
-  justify-content: flex-end;
+.image-and-text img {
+  max-width: 100px;
+  margin-right: 10px;
+  border-radius: 50%; /* Add rounded borders to make the image round */
+}
+
+#projects {
+  padding: 40px;
+  display: none; /* Hide the projects section by default */
+}
+
+.project-tile {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
 }
 
 footer {
